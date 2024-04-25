@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<head>
+  <meta charset="UTF-8">
+  <title>Oblig1</title>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+<h1><strong>Bestilling av kinobilletter</strong></h1>
+      <form class="form">
+        <div class="form-group">
+<div>
+  Velg film:
+  <select id="film">
+    <option disabled selected value="">Velg film her</option>
+    <option value="Oppenheimer">Oppenheimer</option>
+    <option value="Barbie">Barbie</option>
+    <option value="Mean Girls">Mean girls</option>
+  </select>
+  <p style="display: none; color:red" id="valideringFilm">Må velge en film</p>
+</div>
+
+<div class="form-group">
+  Antall:
+  <input type="number" class="form-control" id="antall"/>
+  <p style="display: none; color:red" id="valideringAntall">Må velge gyldig antall</p>
+</div>
+<div class="form-group">
+  Fornavn:
+  <input type="text" class="form-control" id="fnavn"/>
+  <p style="display: none; color:red" id="valideringFornavn">Må skrive inn fornavn</p>
+</div>
+<div class="form-group">
+  Etternavn:
+  <input type="text" class="form-control" id="enavn"/>
+  <p style="display: none; color:red" id="valideringEtternavn">Må skrive inn etternavn</p>
+</div>
+<div class="form-group">
+  Telefonnr:
+  <input type="tel" class="form-control" id="tlf"/>
+  <p style="display: none; color:red" id="valideringTlfnr"></p>
+</div>
+<div class="form-group">
+  Epost:
+  <input type="email" class="form-control" id="epost"/>
+  <p style="display: none; color:red" id="valideringEpost"></p>
+</div>
+
+<button type="button" onclick="kjøp()" class="btn btn-primary">Kjøp billett</button>
+
+<h2><strong>Alle billetter</strong></h2>
+
+<table class="table table-striped" id="alleBilletter">
+  <tr>
+    <td>Film</td>
+    <td>Antall</td>
+    <td>Fornavn</td>
+    <td>Etternavn</td>
+    <td>Telefonnr</td>
+    <td>Epost</td>
+  </tr>
+</table>
+
+
+
+<button onclick="slette()" class="btn btn-danger">Slett alle billettene</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="kinobillett.js"></script>
+
+</body>
+</html>
